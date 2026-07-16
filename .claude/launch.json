@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mallen-excavating",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "/Users/nicolegonzalez/Projects/ai-front-desk/mallen-excavating",
+      "port": 3001
+    }
+  ]
+}
