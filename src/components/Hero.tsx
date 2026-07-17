@@ -45,9 +45,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
         >
-          52 Years Moving
+          Your Neighbor,
           <br />
-          <span className="text-flame-hot">Hudson Valley Earth.</span>
+          <span className="text-flame-hot">Not A Franchise.</span>
         </motion.h1>
 
         <motion.p
@@ -56,9 +56,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          Septic systems, drainage, waterproofing, and site work from a
-          family-owned {business.city} company. Honest pricing, straight
-          answers, and Wayne on the other end of the phone since 1974.
+          Septic, drainage, waterproofing, and site work — done by Wayne
+          himself, not a call center. Fair pricing, straight answers, and
+          52 years of trust across the Hudson Valley.
         </motion.p>
 
         <motion.div

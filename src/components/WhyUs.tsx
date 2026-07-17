@@ -16,13 +16,13 @@ export default function WhyUs() {
     <section className="panel-dark py-20 md:py-28">
       <div className="container-site">
         <Reveal className="mb-14 max-w-2xl">
-          <p className="eyebrow mb-4">Why Choose Us</p>
+          <p className="eyebrow mb-4">What Nobody Else Can Say</p>
           <h2 className="display text-4xl text-white sm:text-5xl">
             The Company Your <span className="text-flame-hot">Neighbors</span> Recommend
           </h2>
         </Reveal>
 
-        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2">
           {whyUs.map((w, i) => {
             const Icon = iconMap[w.icon as keyof typeof iconMap] ?? BadgeCheck;
             return (

@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import LocalLegend from "@/components/LocalLegend";
 import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
-import Gallery from "@/components/Gallery";
 import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
 import QuoteForm from "@/components/QuoteForm";
@@ -45,9 +45,9 @@ export default function HomePage() {
       />
       <Hero />
       <Stats />
-      <Services />
+      <LocalLegend />
+      <Services limit />
       <WhyUs />
-      <Gallery compact />
       <Reviews compact />
       <Faq compact />
       <section className="bg-mist pb-20 md:pb-28" id="quote">

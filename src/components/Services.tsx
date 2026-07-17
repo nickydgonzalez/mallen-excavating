@@ -17,21 +17,35 @@ const iconMap = {
   truck: Truck,
 } as const;
 
-export default function Services({ heading = true }: { heading?: boolean }) {
+const homeSlugs = ["septic-systems", "basement-waterproofing", "drainage", "site-work"];
+
+export default function Services({ heading = true, limit = false }: { heading?: boolean; limit?: boolean }) {
+  const shown = limit ? services.filter((s) => homeSlugs.includes(s.slug)) : services;
   return (
     <section className="bg-mist py-20 md:py-28" id="services">
       <div className="container-site">
         {heading && (
-          <Reveal className="mb-14 max-w-2xl">
-            <p className="eyebrow mb-4">What We Do</p>
-            <h2 className="display text-4xl sm:text-5xl">
-              Every Site Problem, <span className="text-flame">One Call</span>
-            </h2>
+          <Reveal className="mb-14 flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <p className="eyebrow mb-4">What We Do</p>
+              <h2 className="display text-4xl sm:text-5xl">
+                Every Site Problem, <span className="text-flame">One Call</span>
+              </h2>
+            </div>
+            {limit && (
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-flame-deep transition-colors hover:text-flame"
+              >
+                View All Services
+                <ArrowRight className="size-4" aria-hidden />
+              </Link>
+            )}
           </Reveal>
         )}
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => {
+          {shown.map((s, i) => {
             const Icon = iconMap[s.icon as keyof typeof iconMap] ?? Wrench;
             return (
               <Reveal key={s.slug} delay={i * 0.07}>

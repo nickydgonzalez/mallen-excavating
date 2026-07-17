@@ -7,7 +7,7 @@ export const business = {
   name: "Mallen Excavating",
   legalName: "Mallen Excavating",
   owner: "Wayne Mallen",
-  tagline: "Hudson Valley Site Work Since 1974",
+  tagline: "Your Hudson Valley Neighbor Since 1974",
   phone: "(845) 471-3457",
   phoneHref: "tel:+18454713457",
   email: "tuney443@aol.com",
@@ -123,13 +123,18 @@ export const services: Service[] = [
 ];
 
 export const whyUs = [
-  { icon: "badgecheck", title: "52 Years in Business", text: "Serving the Hudson Valley since 1974 — Wayne has seen it all and knows how to handle it." },
-  { icon: "home", title: "Family Owned", text: "You talk to Wayne directly. No call center, no subcontractors passing the job around." },
-  { icon: "wrench", title: "Honest Pricing", text: "Free estimates, straight answers about what your property actually needs." },
-  { icon: "shieldcheck", title: "Licensed & Insured", text: "Fully licensed and insured on every job, residential or larger site work." },
-  { icon: "truck", title: "Professional Equipment", text: "A full fleet of excavators, loaders, and trucks, well maintained and ready." },
-  { icon: "thumbsup", title: "Reliable Scheduling", text: "When Wayne says he'll be there, he's there — 52 years of word-of-mouth is built on that." },
+  { icon: "home", title: "You Talk To Wayne. Period.", text: "No call center, no dispatcher, no subcontractor showing up instead of him. The owner answers the phone and does the work." },
+  { icon: "badgecheck", title: "52 Years, One Family", text: "Not a franchise, not a rollup. The same family has served the Hudson Valley since 1974." },
+  { icon: "wrench", title: "Fair Pricing, No Games", text: "Free estimates, straight answers, and the price we quote is the price you pay." },
+  { icon: "shieldcheck", title: "Licensed, Insured, Ready", text: "Fully licensed and insured with a full fleet of equipment — the paperwork is handled so you don't have to think about it." },
 ];
+
+export const localLegend = {
+  eyebrow: "A Hudson Valley Story",
+  title: "The Excavator Who Found A Mastodon",
+  body: "In 1999, Wayne was called out to a backyard pond in Hyde Park for a routine dig. His backhoe turned up something that wasn't routine at all: the skull of a mastodon, buried for roughly 11,000 years. It turned out to be one of the most complete mastodon skeletons ever found — now on permanent exhibit at the Museum of the Earth, with a cast on display at the Mid-Hudson Children's Museum right here in Poughkeepsie. Customers still bring it up decades later, because it says something true about Wayne: he pays attention to what's in the ground, and to the people who trust him to dig it.",
+  attribution: "Verified Hudson Valley history — search \"Hyde Park mastodon\" to read more.",
+};
 
 export const reviews = [
   {
