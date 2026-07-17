@@ -29,6 +29,7 @@ export const business = {
   ],
   license: "Licensed & Insured · USDOT 1102380",
   brands: [] as string[],
+  googleReviewUrl: "https://www.google.com/maps?cid=8714080345550480193",
 };
 
 export const stats = [

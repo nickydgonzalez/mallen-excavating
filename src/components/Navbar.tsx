@@ -3,17 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, Truck } from "lucide-react";
+import { Phone, Menu, X, Truck, Star } from "lucide-react";
 import { business } from "@/lib/business";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#reviews", label: "Reviews" },
 ];
 
 export default function Navbar() {
@@ -57,9 +52,7 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className={`text-sm font-semibold uppercase tracking-wide transition-colors hover:text-flame-hot ${
-                pathname === l.href ? "text-flame-hot" : "text-white/85"
-              }`}
+              className="text-sm font-semibold uppercase tracking-wide text-white/85 transition-colors hover:text-flame-hot"
             >
               {l.label}
             </Link>
@@ -74,11 +67,20 @@ export default function Navbar() {
             <Phone className="size-4 text-flame-hot" aria-hidden />
             {business.phone}
           </a>
+          <a
+            href={business.googleReviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-1.5 rounded border-2 border-white/25 px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition-all hover:border-flame-hot hover:text-flame-hot lg:flex"
+          >
+            <Star className="size-4" aria-hidden />
+            Leave A Review
+          </a>
           <Link
-            href="/contact#quote"
+            href="/#quote"
             className="hidden rounded bg-flame px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-card transition-all hover:bg-flame-hot hover:shadow-lift sm:block"
           >
-            Request Free Estimate
+            Book Now
           </Link>
           <button
             type="button"
@@ -99,16 +101,28 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
-                className={`border-b border-white/5 py-3 text-sm font-semibold uppercase tracking-wide ${
-                  pathname === l.href ? "text-flame-hot" : "text-white/85"
-                }`}
+                className="border-b border-white/5 py-3 text-sm font-semibold uppercase tracking-wide text-white/85"
               >
                 {l.label}
               </Link>
             ))}
+            <Link
+              href="/#quote"
+              className="mt-4 flex items-center justify-center gap-2 rounded bg-flame px-5 py-3 font-bold uppercase tracking-wide text-white"
+            >
+              Book Now
+            </Link>
+            <a
+              href={business.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex items-center justify-center gap-2 rounded border-2 border-white/25 px-5 py-3 font-bold uppercase tracking-wide text-white"
+            >
+              <Star className="size-4" aria-hidden /> Leave A Review
+            </a>
             <a
               href={business.phoneHref}
-              className="mt-4 flex items-center justify-center gap-2 rounded bg-flame px-5 py-3 font-bold text-white"
+              className="mt-3 flex items-center justify-center gap-2 py-3 font-bold text-white"
             >
               <Phone className="size-4" aria-hidden /> Call {business.phone}
             </a>

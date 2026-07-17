@@ -84,7 +84,9 @@ export default function Reviews({ compact = false }: { compact?: boolean }) {
               Reviews help a family business more than you know — thank you.
             </p>
             <a
-              href="#"
+              href={business.googleReviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-5 inline-block rounded bg-flame px-7 py-3 font-bold uppercase tracking-wide text-white transition-colors hover:bg-flame-hot"
             >
               Leave a Google Review

@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.55 }}
         >
           <Link
-            href="/contact#quote"
+            href="/#quote"
             className="rounded bg-flame px-7 py-4 font-bold uppercase tracking-wide text-white shadow-lift transition-all hover:-translate-y-0.5 hover:bg-flame-hot"
           >
             Request Free Estimate
