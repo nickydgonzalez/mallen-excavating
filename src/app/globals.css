@@ -23,7 +23,7 @@ html {
 }
 
 body {
-  background: var(--color-ink);
+  background: #ffffff;
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

@@ -3,27 +3,23 @@ import Reveal from "@/components/Reveal";
 
 export default function LocalLegend() {
   return (
-    <section className="panel-dark relative overflow-hidden py-24 md:py-32">
-      <div className="blueprint-grid absolute inset-0 opacity-40" aria-hidden />
-      <div className="container-site relative grid items-center gap-14 lg:grid-cols-2">
-        <Reveal className="order-2 lg:order-1">
-          <div className="rounded-3xl bg-mist p-10 shadow-glow">
+    <section className="bg-white py-20 md:py-28">
+      <div className="container-site grid items-center gap-12 lg:grid-cols-2">
+        <Reveal className="order-2 overflow-hidden rounded-lg bg-mist shadow-lift lg:order-1">
+          <div className="grid aspect-[4/3] place-items-center p-10">
             <img
               src="/logo-badge.png"
               alt="Mallen Excavating — Skull Finder"
-              className="mx-auto w-full max-w-xs"
+              className="w-full max-w-xs"
               loading="lazy"
             />
           </div>
         </Reveal>
         <Reveal className="order-1 lg:order-2" delay={0.1}>
-          <span className="glass mb-5 inline-block rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-flame-hot">
-            Featured Discovery
-          </span>
-          <p className="eyebrow on-dark mb-4">{localLegend.eyebrow}</p>
-          <h2 className="display text-4xl text-white sm:text-5xl">{localLegend.title}</h2>
-          <p className="mt-6 max-w-lg leading-relaxed text-white/70">{localLegend.body}</p>
-          <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-white/40">
+          <p className="eyebrow mb-4">{localLegend.eyebrow}</p>
+          <h2 className="display text-4xl sm:text-5xl">{localLegend.title}</h2>
+          <p className="mt-6 max-w-lg leading-relaxed text-slate/85">{localLegend.body}</p>
+          <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-slate/50">
             {localLegend.attribution}
           </p>
         </Reveal>

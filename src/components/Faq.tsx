@@ -11,28 +11,28 @@ export default function Faq({ compact = false }: { compact?: boolean }) {
   const shown = compact ? faqs.slice(0, 4) : faqs;
 
   return (
-    <section className="bg-ink py-24 md:py-32" id="faq">
+    <section className="bg-white py-20 md:py-28" id="faq">
       <div className="container-site grid gap-14 lg:grid-cols-[1fr_1.6fr]">
         <Reveal>
-          <p className="eyebrow on-dark mb-4">FAQ</p>
-          <h2 className="display text-4xl text-white sm:text-5xl">
-            Straight <span className="text-flame-hot">Answers</span>
+          <p className="eyebrow mb-4">FAQ</p>
+          <h2 className="display text-4xl sm:text-5xl">
+            Straight <span className="text-flame">Answers</span>
           </h2>
-          <p className="mt-5 leading-relaxed text-white/60">
+          <p className="mt-5 leading-relaxed text-slate/80">
             The questions every homeowner asks — answered honestly. Don&apos;t see
             yours? Ask the assistant in the corner or give us a call.
           </p>
           {compact && (
             <a
               href="/faq"
-              className="glass mt-7 inline-block rounded-full px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-all hover:border-flame/40"
+              className="mt-7 inline-block rounded border-2 border-ink px-6 py-2.5 text-sm font-bold uppercase tracking-wide transition-all hover:bg-ink hover:text-white"
             >
               All {faqs.length} Questions
             </a>
           )}
         </Reveal>
 
-        <div className="divide-y divide-white/10 border-y border-white/10">
+        <div className="divide-y divide-mist border-y border-mist">
           {shown.map((f, i) => {
             const isOpen = open === i;
             return (
@@ -43,11 +43,11 @@ export default function Faq({ compact = false }: { compact?: boolean }) {
                   className="flex w-full items-center justify-between gap-6 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-bold leading-snug text-white">{f.q}</span>
+                  <span className="font-bold leading-snug">{f.q}</span>
                   <motion.span
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className={`grid size-8 shrink-0 place-items-center rounded-full ${isOpen ? "bg-flame text-white" : "bg-white/10 text-white"}`}
+                    className={`grid size-8 shrink-0 place-items-center rounded-full ${isOpen ? "bg-flame text-white" : "bg-mist text-ink"}`}
                   >
                     <Plus className="size-4" aria-hidden />
                   </motion.span>
@@ -61,7 +61,7 @@ export default function Faq({ compact = false }: { compact?: boolean }) {
                       transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className="pb-6 pr-14 leading-relaxed text-white/60">{f.a}</p>
+                      <p className="pb-6 pr-14 leading-relaxed text-slate/80">{f.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import LocalLegend from "@/components/LocalLegend";
 import Services from "@/components/Services";
 import PhotoStrip from "@/components/PhotoStrip";
@@ -45,7 +44,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
-      <Stats />
       <Services limit />
       <WhyUs />
       <PhotoStrip />
@@ -56,18 +54,18 @@ export default function HomePage() {
       />
       <Reviews compact />
       <Faq compact />
-      <section className="bg-ink pb-24 pt-4 md:pb-32" id="quote">
+      <section className="bg-mist pb-20 md:pb-28" id="quote">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
-            <p className="eyebrow on-dark mb-4">Free Estimate</p>
-            <h2 className="display text-4xl text-white sm:text-5xl">
-              Get Your <span className="text-flame-hot">Free Quote</span> In 60 Seconds
+            <p className="eyebrow mb-4">Free Estimate</p>
+            <h2 className="display text-4xl sm:text-5xl">
+              Get Your <span className="text-flame">Free Quote</span> In 60 Seconds
             </h2>
-            <p className="mt-5 max-w-md leading-relaxed text-white/60">
+            <p className="mt-5 max-w-md leading-relaxed text-slate/80">
               Tell us what&apos;s going on and Wayne will call you back with an
               honest assessment — no pressure, no games.
             </p>
-            <ul className="mt-7 space-y-2.5 text-sm font-semibold text-white/85">
+            <ul className="mt-7 space-y-2.5 text-sm font-semibold">
               {["No obligation, no pressure", "Straight pricing before any work", "52 years of Hudson Valley experience"].map((t) => (
                 <li key={t} className="flex items-center gap-2.5">
                   <span className="size-1.5 rounded-full bg-flame" /> {t}

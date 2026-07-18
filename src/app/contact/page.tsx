@@ -11,8 +11,6 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const mapQuery = encodeURIComponent(`${business.legalName}, ${business.address}`);
-
   return (
     <main>
       <PageHeader
@@ -22,13 +20,13 @@ export default function ContactPage() {
         lede="Call, text, or send the form — Wayne answers his own phone and will get back to you fast."
       />
 
-      <section className="bg-ink py-24 md:py-28" id="quote">
+      <section className="bg-mist py-20 md:py-24" id="quote">
         <div className="container-site grid gap-12 lg:grid-cols-[1fr_1.3fr]">
           <Reveal>
             <div className="space-y-6">
               <a
                 href={business.phoneHref}
-                className="flex items-center gap-5 rounded-2xl bg-flame p-6 text-white shadow-glow transition-transform hover:-translate-y-1"
+                className="flex items-center gap-5 rounded-lg bg-flame p-6 text-white shadow-card transition-transform hover:-translate-y-0.5"
               >
                 <PhoneCall className="size-9 shrink-0" aria-hidden />
                 <div>
@@ -39,7 +37,7 @@ export default function ContactPage() {
                 </div>
               </a>
 
-              <div className="space-y-5 rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+              <div className="space-y-5 rounded-lg bg-white p-7 shadow-card">
                 {[
                   { Icon: Phone, label: "Phone", value: business.phone, href: business.phoneHref },
                   { Icon: Mail, label: "Email", value: business.email, href: `mailto:${business.email}` },
@@ -47,26 +45,26 @@ export default function ContactPage() {
                   { Icon: Clock, label: "Hours", value: business.hours },
                 ].map(({ Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4">
-                    <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-white/10 text-flame-hot">
+                    <span className="grid size-11 shrink-0 place-items-center rounded bg-mist text-flame">
                       <Icon className="size-5" aria-hidden />
                     </span>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-widest text-white/50">{label}</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-slate/60">{label}</p>
                       {href ? (
-                        <a href={href} className="font-semibold text-white transition-colors hover:text-flame-hot">{value}</a>
+                        <a href={href} className="font-semibold transition-colors hover:text-flame-deep">{value}</a>
                       ) : (
-                        <p className="font-semibold text-white">{value}</p>
+                        <p className="font-semibold">{value}</p>
                       )}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="overflow-hidden rounded-2xl border border-white/10">
+              <div className="overflow-hidden rounded-lg shadow-card">
                 <iframe
                   title={`${business.name} location map`}
-                  src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
-                  className="aspect-[16/9] w-full grayscale invert-[0.92] contrast-125"
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(`${business.legalName}, ${business.address}`)}&output=embed`}
+                  className="aspect-[16/9] w-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />

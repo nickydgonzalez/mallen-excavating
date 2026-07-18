@@ -38,14 +38,14 @@ export default function PrivacyPage() {
   return (
     <main>
       <PageHeader eyebrow="Legal" title="Privacy" accent="Policy" />
-      <section className="bg-ink py-20 md:py-24">
+      <section className="bg-white py-16 md:py-20">
         <div className="container-site max-w-3xl">
-          <p className="text-sm text-white/50">Last updated: July 2026</p>
+          <p className="text-sm text-slate/60">Last updated: July 2026</p>
           <div className="mt-8 space-y-10">
             {sections.map((s) => (
               <div key={s.h}>
-                <h2 className="text-xl font-extrabold uppercase tracking-tight text-white">{s.h}</h2>
-                <p className="mt-3 leading-relaxed text-white/65">{s.p}</p>
+                <h2 className="text-xl font-extrabold uppercase tracking-tight">{s.h}</h2>
+                <p className="mt-3 leading-relaxed text-slate/85">{s.p}</p>
               </div>
             ))}
           </div>
