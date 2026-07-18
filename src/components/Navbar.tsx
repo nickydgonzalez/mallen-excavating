@@ -27,36 +27,36 @@ export default function Navbar() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4 sm:px-5 sm:pt-5">
       <div
-        className={`mx-auto flex max-w-[76rem] items-center justify-between gap-4 rounded-2xl px-4 py-2.5 transition-all duration-500 sm:px-6 ${
+        className={`mx-auto flex max-w-[84rem] items-center justify-between gap-6 rounded-3xl px-5 py-3.5 transition-all duration-500 sm:px-8 sm:py-4 ${
           transparent ? "bg-transparent" : "glass shadow-lift"
         }`}
       >
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
-          <span className="grid size-11 place-items-center overflow-hidden rounded-xl bg-white p-1 shadow-card sm:size-13">
+          <span className="grid size-16 place-items-center overflow-hidden rounded-2xl bg-white p-1.5 shadow-card sm:size-20">
             <img src="/logo.png" alt={business.name} className="size-full object-contain" />
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-10 lg:flex" aria-label="Main">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-semibold uppercase tracking-wide text-white/80 transition-colors hover:text-flame-hot"
+              className="text-base font-bold uppercase tracking-wide text-white/85 transition-colors hover:text-flame-hot"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-3 sm:gap-4">
           <a
             href={business.phoneHref}
-            className="hidden items-center gap-2 text-sm font-bold text-white transition-colors hover:text-flame-hot md:flex"
+            className="hidden items-center gap-2 text-base font-bold text-white transition-colors hover:text-flame-hot md:flex"
           >
-            <Phone className="size-4 text-flame-hot" aria-hidden />
+            <Phone className="size-5 text-flame-hot" aria-hidden />
             {business.phone}
           </a>
           <a
@@ -77,11 +77,11 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="grid size-10 place-items-center rounded-full text-white lg:hidden"
+            className="grid size-12 place-items-center rounded-full text-white lg:hidden"
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
           >
-            {open ? <X className="size-6" aria-hidden /> : <Menu className="size-6" aria-hidden />}
+            {open ? <X className="size-7" aria-hidden /> : <Menu className="size-7" aria-hidden />}
           </button>
         </div>
       </div>

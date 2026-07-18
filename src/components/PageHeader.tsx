@@ -12,7 +12,7 @@ export default function PageHeader({
   lede?: string;
 }) {
   return (
-    <section className="panel-dark relative overflow-hidden pb-20 pt-40 md:pb-24 md:pt-48">
+    <section className="panel-dark relative overflow-hidden pb-20 pt-44 md:pb-24 md:pt-52">
       <div className="blueprint-grid absolute inset-0 opacity-40" aria-hidden />
       <div className="container-site relative">
         <Reveal>

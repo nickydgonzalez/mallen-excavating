@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
 
-      <div className="container-site relative z-10 pb-24 pt-40">
+      <div className="container-site relative z-10 pb-24 pt-48">
         <motion.p
           className="eyebrow on-dark mb-7"
           initial={{ opacity: 0, x: -16 }}
