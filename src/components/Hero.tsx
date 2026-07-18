@@ -66,10 +66,17 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
         >
-          Hudson Valley
-          <br />
-          <span className="text-flame-hot">Excavation &amp; Site Work.</span>
+          {business.name}
         </motion.h1>
+
+        <motion.p
+          className="display mt-2 text-3xl text-flame-hot sm:text-4xl lg:text-5xl"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.38 }}
+        >
+          Excavation &amp; Site Work
+        </motion.p>
 
         <motion.p
           className="mt-7 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl"
