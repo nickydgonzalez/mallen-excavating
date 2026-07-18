@@ -33,7 +33,7 @@ export default function Reviews({ compact = false }: { compact?: boolean }) {
           </div>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {shown.map((r, i) => (
             <Reveal key={r.name} delay={i * 0.07}>
               <figure className="flex h-full flex-col rounded-lg bg-white p-7 shadow-card transition-shadow hover:shadow-lift">

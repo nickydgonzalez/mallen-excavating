@@ -44,7 +44,7 @@ export default function Services({ heading = true, limit = false }: { heading?: 
           </Reveal>
         )}
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className={`grid gap-6 sm:grid-cols-2 ${limit ? "" : "lg:grid-cols-3"}`}>
           {shown.map((s, i) => {
             const Icon = iconMap[s.icon as keyof typeof iconMap] ?? Wrench;
             return (

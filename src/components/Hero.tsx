@@ -29,7 +29,16 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
       </div>
 
-      <div className="container-site relative z-10 pb-20 pt-36">
+      <div className="container-site relative z-10 pb-20 pt-32">
+        <motion.img
+          src="/logo-badge.png"
+          alt={business.name}
+          className="mb-2 h-32 w-auto sm:h-40 lg:h-48"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        />
+
         <motion.p
           className="eyebrow mb-6"
           initial={{ opacity: 0, x: -16 }}
