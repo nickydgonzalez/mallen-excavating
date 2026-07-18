@@ -63,14 +63,14 @@ export default function Navbar() {
             href={business.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-1.5 rounded-full border border-white/20 px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition-all hover:border-flame-hot hover:text-flame-hot lg:flex"
+            className="hidden items-center gap-2 rounded-full border-2 border-white/30 px-5 py-3 text-sm font-extrabold uppercase tracking-wide text-white transition-all hover:-translate-y-0.5 hover:border-flame-hot hover:text-flame-hot lg:flex"
           >
-            <Star className="size-4" aria-hidden />
+            <Star className="size-4.5 fill-current" aria-hidden />
             Leave A Review
           </a>
           <Link
             href="/#quote"
-            className="hidden rounded-full bg-flame px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-flame-hot sm:block"
+            className="hidden rounded-full bg-flame px-7 py-3.5 text-base font-extrabold uppercase tracking-wide text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-flame-hot hover:shadow-[0_0_0_1px_rgb(242_92_5_/_0.4),0_20px_56px_-12px_rgb(242_92_5_/_0.55)] sm:block"
           >
             Book Now
           </Link>
@@ -100,7 +100,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/#quote"
-              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-flame px-5 py-3 font-bold uppercase tracking-wide text-white"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-flame px-5 py-4 text-base font-extrabold uppercase tracking-wide text-white shadow-glow"
             >
               Book Now
             </Link>
@@ -108,9 +108,9 @@ export default function Navbar() {
               href={business.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 font-bold uppercase tracking-wide text-white"
+              className="mt-3 flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-5 py-4 text-base font-extrabold uppercase tracking-wide text-white"
             >
-              <Star className="size-4" aria-hidden /> Leave A Review
+              <Star className="size-4.5 fill-current" aria-hidden /> Leave A Review
             </a>
             <a
               href={business.phoneHref}
