@@ -68,7 +68,7 @@ export default function Hero() {
         >
           Hudson Valley
           <br />
-          <span className="text-flame-hot text-glow">Excavation &amp; Site Work.</span>
+          <span className="text-flame-hot">Excavation &amp; Site Work.</span>
         </motion.h1>
 
         <motion.p
