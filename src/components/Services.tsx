@@ -57,11 +57,11 @@ export default function Services({ heading = true, limit = false }: { heading?: 
                       loading="lazy"
                       className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <span className="absolute bottom-0 left-5 grid size-12 translate-y-1/2 place-items-center rounded bg-flame text-white shadow-card">
+                  </div>
+                  <div className="relative flex flex-1 flex-col p-6 pt-10">
+                    <span className="absolute -top-6 left-5 grid size-12 place-items-center rounded bg-flame text-white shadow-card">
                       <Icon className="size-6" aria-hidden />
                     </span>
-                  </div>
-                  <div className="flex flex-1 flex-col p-6 pt-10">
                     <h3 className="text-xl font-extrabold uppercase tracking-tight">{s.title}</h3>
                     <p className="mt-2.5 flex-1 text-[0.95rem] leading-relaxed text-slate/80">{s.blurb}</p>
                     <Link

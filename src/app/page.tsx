@@ -44,10 +44,10 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
-      <LocalLegend />
       <Services limit />
-      <PhotoStrip />
       <WhyUs />
+      <PhotoStrip />
+      <LocalLegend />
       <Reviews compact />
       <Faq compact />
       <section className="bg-mist pb-20 md:pb-28" id="quote">

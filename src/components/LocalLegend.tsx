@@ -1,18 +1,19 @@
 import { localLegend } from "@/lib/business";
-import { images } from "@/lib/images";
 import Reveal from "@/components/Reveal";
 
 export default function LocalLegend() {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="container-site grid items-center gap-12 lg:grid-cols-2">
-        <Reveal className="order-2 overflow-hidden rounded-lg shadow-lift lg:order-1">
-          <img
-            src={images.about}
-            alt="Excavator at work on a Hudson Valley job site"
-            className="aspect-[4/3] w-full object-cover"
-            loading="lazy"
-          />
+        <Reveal className="order-2 overflow-hidden rounded-lg bg-mist shadow-lift lg:order-1">
+          <div className="grid aspect-[4/3] place-items-center p-10">
+            <img
+              src="/logo-badge.png"
+              alt="Mallen Excavating — Skull Finder"
+              className="w-full max-w-xs"
+              loading="lazy"
+            />
+          </div>
         </Reveal>
         <Reveal className="order-1 lg:order-2" delay={0.1}>
           <p className="eyebrow mb-4">{localLegend.eyebrow}</p>
