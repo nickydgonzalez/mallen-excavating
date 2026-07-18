@@ -11,6 +11,7 @@ export const images = {
 
   septic: p("septic-01-pipe-trench.jpg"),
   waterproofing: p("waterproofing-01-trench-propane.jpg"),
+  drainage: p("drainage-01-retaining-wall.jpg"),
   grading: p("grading-03-topsoil-pile.jpg"),
   driveways: p("grading-02-cleared-lot.jpg"),
   clearing: p("clearing-01-stump-removal.jpg"),

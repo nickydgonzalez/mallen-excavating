@@ -83,7 +83,7 @@ export const services: Service[] = [
     blurb: "Standing water and soggy yards, solved.",
     description:
       "Poor drainage ruins lawns, driveways, and foundations. We grade and install drainage systems that move water where it should go.",
-    image: "waterproofing",
+    image: "drainage",
   },
   {
     slug: "grading-topsoil",
