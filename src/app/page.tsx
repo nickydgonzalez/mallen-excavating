@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
 import LocalLegend from "@/components/LocalLegend";
 import Services from "@/components/Services";
+import PhotoStrip from "@/components/PhotoStrip";
 import WhyUs from "@/components/WhyUs";
 import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
@@ -44,9 +44,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
-      <Stats />
       <LocalLegend />
       <Services limit />
+      <PhotoStrip />
       <WhyUs />
       <Reviews compact />
       <Faq compact />

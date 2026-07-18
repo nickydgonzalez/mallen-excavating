@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 
 export default function Faq({ compact = false }: { compact?: boolean }) {
   const [open, setOpen] = useState<number | null>(0);
-  const shown = compact ? faqs.slice(0, 8) : faqs;
+  const shown = compact ? faqs.slice(0, 4) : faqs;
 
   return (
     <section className="bg-white py-20 md:py-28" id="faq">
