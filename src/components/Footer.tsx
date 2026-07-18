@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Truck } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { business, services } from "@/lib/business";
 
 function FacebookIcon({ className }: { className?: string }) {
@@ -10,28 +10,14 @@ function FacebookIcon({ className }: { className?: string }) {
   );
 }
 
-function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={className} aria-hidden>
-      <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
-      <circle cx="12" cy="12" r="3.8" />
-      <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
 export default function Footer() {
   return (
     <footer className="bg-ink text-white/80">
       <div className="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center gap-2.5 text-white">
-            <span className="grid size-10 place-items-center rounded bg-flame text-white">
-              <Truck className="size-6" aria-hidden />
-            </span>
-            <span className="leading-none">
-              <span className="display block text-lg">Mallen</span>
-              <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-smoke">Excavating</span>
+          <Link href="/" className="flex items-center">
+            <span className="grid size-16 place-items-center overflow-hidden rounded-lg bg-white p-1.5 shadow-card">
+              <img src="/logo.png" alt={business.name} className="size-full object-contain" />
             </span>
           </Link>
           <p className="mt-5 text-sm leading-relaxed">
@@ -40,16 +26,15 @@ export default function Footer() {
           </p>
           <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-smoke">{business.license}</p>
           <div className="mt-5 flex gap-3">
-            {[{ Icon: FacebookIcon, label: "Facebook" }, { Icon: InstagramIcon, label: "Instagram" }].map(({ Icon, label }) => (
-              <a
-                key={label}
-                href="#"
-                aria-label={label}
-                className="grid size-10 place-items-center rounded-full bg-white/10 transition-colors hover:bg-flame hover:text-white"
-              >
-                <Icon className="size-4.5" />
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/MallenExcavatingNY"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="grid size-10 place-items-center rounded-full bg-white/10 transition-colors hover:bg-flame hover:text-white"
+            >
+              <FacebookIcon className="size-4.5" />
+            </a>
           </div>
         </div>
 

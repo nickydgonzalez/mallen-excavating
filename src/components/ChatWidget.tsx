@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, Truck, CheckCircle2 } from "lucide-react";
+import { MessageCircle, X, Send, CheckCircle2 } from "lucide-react";
 import { business, chatAnswers, chatQuickQuestions } from "@/lib/business";
 
 type Msg = { from: "bot" | "user"; text: string };
@@ -102,8 +102,8 @@ export default function ChatWidget() {
             aria-label="Chat with our AI assistant"
           >
             <div className="flex items-center gap-3 bg-ink px-5 py-4">
-              <span className="relative grid size-10 place-items-center rounded-full bg-flame text-white">
-                <Truck className="size-5" aria-hidden />
+              <span className="relative grid size-10 place-items-center overflow-hidden rounded-full bg-white">
+                <img src="/logo.png" alt="" className="size-full object-contain p-0.5" />
                 <span className="absolute -right-0.5 -top-0.5 size-3 rounded-full border-2 border-ink bg-green-400" />
               </span>
               <div className="flex-1">

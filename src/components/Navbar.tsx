@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Phone, Menu, X, Truck, Star } from "lucide-react";
+import { Phone, Menu, X, Star } from "lucide-react";
 import { business } from "@/lib/business";
 
 const links = [
@@ -35,15 +35,9 @@ export default function Navbar() {
       }`}
     >
       <div className="container-site flex items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2.5 text-white" aria-label={`${business.name} home`}>
-          <span className="grid size-10 place-items-center rounded bg-flame text-white">
-            <Truck className="size-6" aria-hidden />
-          </span>
-          <span className="leading-none">
-            <span className="display block text-lg">Mallen</span>
-            <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-smoke">
-              Excavating
-            </span>
+        <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
+          <span className="grid size-13 place-items-center overflow-hidden rounded-lg bg-white p-1 shadow-card">
+            <img src="/logo.png" alt={business.name} className="size-full object-contain" />
           </span>
         </Link>
 
