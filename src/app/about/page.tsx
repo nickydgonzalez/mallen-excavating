@@ -21,14 +21,14 @@ export default function AboutPage() {
         lede="When you call us, you talk to the people who do the work — not a call center reading a script."
       />
 
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-ink py-24 md:py-32">
         <div className="container-site grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
-            <p className="eyebrow mb-4">Our Story</p>
-            <h2 className="display text-4xl">
-              Built On <span className="text-flame">Word Of Mouth</span>
+            <p className="eyebrow on-dark mb-4">Our Story</p>
+            <h2 className="display text-4xl text-white">
+              Built On <span className="text-flame-hot">Word Of Mouth</span>
             </h2>
-            <div className="mt-6 space-y-4 leading-relaxed text-slate/85">
+            <div className="mt-6 space-y-4 leading-relaxed text-white/65">
               <p>
                 {business.owner} started {business.name} in {business.founded} with
                 one truck and a simple idea: treat every property in the Hudson
@@ -47,7 +47,7 @@ export default function AboutPage() {
                 Hudson Valley — still family owned, still hands-on.
               </p>
             </div>
-            <dl className="mt-9 grid grid-cols-3 gap-6 border-t border-mist pt-7">
+            <dl className="mt-9 grid grid-cols-3 gap-6 border-t border-white/10 pt-7">
               {[
                 [`${business.yearsInBusiness}+`, "Years"],
                 [`${business.founded}`, "Est."],
@@ -55,8 +55,8 @@ export default function AboutPage() {
               ].map(([v, l]) => (
                 <div key={l}>
                   <dt className="sr-only">{l}</dt>
-                  <dd className="display text-3xl text-flame">{v}</dd>
-                  <p className="mt-1 text-xs font-bold uppercase tracking-widest text-slate/60">{l}</p>
+                  <dd className="display text-3xl text-flame-hot">{v}</dd>
+                  <p className="mt-1 text-xs font-bold uppercase tracking-widest text-white/50">{l}</p>
                 </div>
               ))}
             </dl>
@@ -66,10 +66,10 @@ export default function AboutPage() {
               <img
                 src={images.about}
                 alt="Excavator staged on a Hudson Valley job site"
-                className="w-full rounded-lg object-cover shadow-lift"
+                className="w-full rounded-2xl border border-white/10 object-cover shadow-lift"
                 loading="lazy"
               />
-              <div className="absolute -bottom-6 -left-6 hidden rounded-lg bg-flame px-7 py-5 text-white shadow-lift sm:block">
+              <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-flame px-7 py-5 text-white shadow-glow sm:block">
                 <p className="display text-3xl">Est. {business.founded}</p>
                 <p className="text-xs font-bold uppercase tracking-widest text-white/85">
                   {business.city}, New York

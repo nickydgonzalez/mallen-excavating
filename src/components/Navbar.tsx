@@ -27,33 +27,31 @@ export default function Navbar() {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        transparent
-          ? "bg-transparent py-4"
-          : "bg-ink/95 shadow-lg backdrop-blur-md py-2"
-      }`}
-    >
-      <div className="container-site flex items-center justify-between gap-4">
+    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
+      <div
+        className={`mx-auto flex max-w-[76rem] items-center justify-between gap-4 rounded-2xl px-4 py-2.5 transition-all duration-500 sm:px-6 ${
+          transparent ? "bg-transparent" : "glass shadow-lift"
+        }`}
+      >
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
-          <span className="grid size-13 place-items-center overflow-hidden rounded-lg bg-white p-1 shadow-card">
+          <span className="grid size-11 place-items-center overflow-hidden rounded-xl bg-white p-1 shadow-card sm:size-13">
             <img src="/logo.png" alt={business.name} className="size-full object-contain" />
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-semibold uppercase tracking-wide text-white/85 transition-colors hover:text-flame-hot"
+              className="text-sm font-semibold uppercase tracking-wide text-white/80 transition-colors hover:text-flame-hot"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3">
           <a
             href={business.phoneHref}
             className="hidden items-center gap-2 text-sm font-bold text-white transition-colors hover:text-flame-hot md:flex"
@@ -65,21 +63,21 @@ export default function Navbar() {
             href={business.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-1.5 rounded border-2 border-white/25 px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition-all hover:border-flame-hot hover:text-flame-hot lg:flex"
+            className="hidden items-center gap-1.5 rounded-full border border-white/20 px-4 py-2 text-sm font-bold uppercase tracking-wide text-white transition-all hover:border-flame-hot hover:text-flame-hot lg:flex"
           >
             <Star className="size-4" aria-hidden />
             Leave A Review
           </a>
           <Link
             href="/#quote"
-            className="hidden rounded bg-flame px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-card transition-all hover:bg-flame-hot hover:shadow-lift sm:block"
+            className="hidden rounded-full bg-flame px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-flame-hot sm:block"
           >
             Book Now
           </Link>
           <button
             type="button"
             onClick={() => setOpen(!open)}
-            className="grid size-10 place-items-center rounded text-white lg:hidden"
+            className="grid size-10 place-items-center rounded-full text-white lg:hidden"
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
           >
@@ -89,20 +87,20 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="border-t border-white/10 bg-ink lg:hidden" aria-label="Mobile">
-          <div className="container-site flex flex-col py-4">
+        <nav className="glass mx-auto mt-2 max-w-[76rem] rounded-2xl shadow-lift lg:hidden" aria-label="Mobile">
+          <div className="flex flex-col p-4">
             {links.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="border-b border-white/5 py-3 text-sm font-semibold uppercase tracking-wide text-white/85"
+                className="border-b border-white/10 py-3 text-sm font-semibold uppercase tracking-wide text-white/85"
               >
                 {l.label}
               </Link>
             ))}
             <Link
               href="/#quote"
-              className="mt-4 flex items-center justify-center gap-2 rounded bg-flame px-5 py-3 font-bold uppercase tracking-wide text-white"
+              className="mt-4 flex items-center justify-center gap-2 rounded-full bg-flame px-5 py-3 font-bold uppercase tracking-wide text-white"
             >
               Book Now
             </Link>
@@ -110,7 +108,7 @@ export default function Navbar() {
               href={business.googleReviewUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 flex items-center justify-center gap-2 rounded border-2 border-white/25 px-5 py-3 font-bold uppercase tracking-wide text-white"
+              className="mt-3 flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 font-bold uppercase tracking-wide text-white"
             >
               <Star className="size-4" aria-hidden /> Leave A Review
             </a>

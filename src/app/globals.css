@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand — premium contractor: charcoal, white, safety orange */
-  --color-ink: #141618;
-  --color-coal: #1e2124;
-  --color-slate: #2a2e32;
+  /* Brand — luxury matte black, charcoal, white, construction orange */
+  --color-ink: #0a0b0c;
+  --color-coal: #151719;
+  --color-slate: #232629;
   --color-smoke: #9aa3ab;
   --color-mist: #f4f5f6;
   --color-flame: #f25c05;
@@ -13,8 +13,9 @@
 
   --font-sans: var(--font-archivo), system-ui, sans-serif;
 
-  --shadow-lift: 0 24px 48px -12px rgb(20 22 24 / 0.18);
-  --shadow-card: 0 8px 24px -8px rgb(20 22 24 / 0.12);
+  --shadow-lift: 0 32px 64px -16px rgb(0 0 0 / 0.35);
+  --shadow-card: 0 8px 24px -8px rgb(0 0 0 / 0.16);
+  --shadow-glow: 0 0 0 1px rgb(242 92 5 / 0.25), 0 16px 48px -12px rgb(242 92 5 / 0.35);
 }
 
 html {
@@ -22,7 +23,7 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: var(--color-ink);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -35,8 +36,8 @@ body {
 
 .display {
   font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
   text-transform: uppercase;
 }
 
@@ -46,7 +47,7 @@ body {
   gap: 0.625rem;
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--color-flame);
 }
@@ -55,6 +56,9 @@ body {
   width: 2rem;
   height: 2px;
   background: var(--color-flame);
+}
+.eyebrow.on-dark {
+  color: var(--color-flame-hot);
 }
 
 .container-site {
@@ -72,6 +76,26 @@ body {
   background:
     radial-gradient(120% 60% at 50% 0%, rgb(255 255 255 / 0.06) 0%, transparent 60%),
     var(--color-coal);
+}
+
+/* frosted glass surface for floating UI on dark/photo backgrounds */
+.glass {
+  background: rgb(255 255 255 / 0.06);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgb(255 255 255 / 0.12);
+}
+
+/* faint blueprint grid — a construction detail, not decoration for its own sake */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.text-glow {
+  text-shadow: 0 0 40px rgb(242 92 5 / 0.35);
 }
 
 @media (prefers-reduced-motion: reduce) {

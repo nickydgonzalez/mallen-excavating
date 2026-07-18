@@ -97,7 +97,7 @@ export default function ChatWidget() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 24, scale: 0.96 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed bottom-24 right-4 z-[70] flex max-h-[70svh] w-[min(24rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-xl bg-white shadow-lift ring-1 ring-ink/10"
+            className="fixed bottom-24 right-4 z-[70] flex max-h-[70svh] w-[min(24rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl bg-white shadow-lift ring-1 ring-ink/10"
             role="dialog"
             aria-label="Chat with our AI assistant"
           >
@@ -200,7 +200,7 @@ export default function ChatWidget() {
       <motion.button
         type="button"
         onClick={() => setOpen(!open)}
-        className="fixed bottom-5 right-4 z-[70] flex items-center gap-2.5 rounded-full bg-flame py-3.5 pl-4 pr-5 font-bold text-white shadow-lift transition-colors hover:bg-flame-hot"
+        className="fixed bottom-5 right-4 z-[70] flex items-center gap-2.5 rounded-full bg-flame py-3.5 pl-4 pr-5 font-bold text-white shadow-glow transition-colors hover:bg-flame-hot"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1.2, duration: 0.4 }}

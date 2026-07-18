@@ -12,14 +12,15 @@ export default function PageHeader({
   lede?: string;
 }) {
   return (
-    <section className="panel-dark pb-16 pt-36 md:pb-20 md:pt-44">
-      <div className="container-site">
+    <section className="panel-dark relative overflow-hidden pb-20 pt-40 md:pb-24 md:pt-48">
+      <div className="blueprint-grid absolute inset-0 opacity-40" aria-hidden />
+      <div className="container-site relative">
         <Reveal>
-          <p className="eyebrow mb-5">{eyebrow}</p>
-          <h1 className="display max-w-3xl text-5xl text-white sm:text-6xl">
-            {title} <span className="text-flame-hot">{accent}</span>
+          <p className="eyebrow on-dark mb-5">{eyebrow}</p>
+          <h1 className="display max-w-3xl text-5xl text-white sm:text-6xl lg:text-7xl">
+            {title} <span className="text-flame-hot text-glow">{accent}</span>
           </h1>
-          {lede && <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">{lede}</p>}
+          {lede && <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">{lede}</p>}
         </Reveal>
       </div>
     </section>

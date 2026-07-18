@@ -28,13 +28,13 @@ export default function CtaBand({
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/contact#quote"
-            className="rounded bg-ink px-8 py-4 font-bold uppercase tracking-wide text-white shadow-lift transition-transform hover:-translate-y-0.5"
+            className="rounded-full bg-ink px-8 py-4 font-bold uppercase tracking-wide text-white shadow-lift transition-transform hover:-translate-y-1"
           >
             Request Free Estimate
           </Link>
           <a
             href={business.phoneHref}
-            className="flex items-center gap-2.5 rounded bg-white px-8 py-4 font-bold uppercase tracking-wide text-ink shadow-lift transition-transform hover:-translate-y-0.5"
+            className="flex items-center gap-2.5 rounded-full bg-white px-8 py-4 font-bold uppercase tracking-wide text-ink shadow-lift transition-transform hover:-translate-y-1"
           >
             <Phone className="size-5 text-flame" aria-hidden />
             {business.phone}

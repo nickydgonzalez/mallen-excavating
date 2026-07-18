@@ -27,7 +27,7 @@ export default function Reveal({
       variants={variants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "0px 0px -80px 0px" }}
       custom={delay}
     >
       {children}
