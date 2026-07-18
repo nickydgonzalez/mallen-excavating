@@ -61,7 +61,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="display max-w-4xl text-6xl text-white sm:text-7xl lg:text-8xl"
+          className="display max-w-5xl whitespace-nowrap text-4xl text-flame-hot sm:text-6xl lg:text-7xl"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
@@ -70,7 +70,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="display mt-2 text-3xl text-flame-hot sm:text-4xl lg:text-5xl"
+          className="display mt-2 text-3xl text-white sm:text-4xl lg:text-5xl"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.38 }}
