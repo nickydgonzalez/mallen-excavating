@@ -3,7 +3,13 @@ import { Phone } from "lucide-react";
 import { business } from "@/lib/business";
 import Reveal from "@/components/Reveal";
 
-export default function CtaBand() {
+export default function CtaBand({
+  heading = "52 Years Of Honest Hudson Valley Site Work",
+  subtext = "Free estimates. Reliable scheduling. Wayne picks up his own phone.",
+}: {
+  heading?: string;
+  subtext?: string;
+}) {
   return (
     <section className="relative overflow-hidden bg-flame">
       <div
@@ -16,11 +22,9 @@ export default function CtaBand() {
       />
       <Reveal className="container-site relative flex flex-col items-center gap-7 py-16 text-center md:py-20">
         <h2 className="display max-w-3xl text-4xl text-white sm:text-5xl">
-          52 Years Of Honest Hudson Valley Site Work
+          {heading}
         </h2>
-        <p className="max-w-xl text-white/90">
-          Free estimates. Reliable scheduling. Wayne picks up his own phone.
-        </p>
+        <p className="max-w-xl text-white/90">{subtext}</p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/contact#quote"

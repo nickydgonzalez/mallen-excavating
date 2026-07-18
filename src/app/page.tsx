@@ -48,6 +48,10 @@ export default function HomePage() {
       <WhyUs />
       <PhotoStrip />
       <LocalLegend />
+      <CtaBand
+        heading="52 Years Built This Reputation"
+        subtext="Free estimates, straight answers, and a phone Wayne actually answers."
+      />
       <Reviews compact />
       <Faq compact />
       <section className="bg-mist pb-20 md:pb-28" id="quote">
