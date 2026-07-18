@@ -2,47 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X } from "lucide-react";
 import { galleryCategories } from "@/lib/business";
-import { galleryItems, beforeAfter } from "@/lib/images";
+import { galleryItems } from "@/lib/images";
 import Reveal from "@/components/Reveal";
-
-function BeforeAfter() {
-  const [pos, setPos] = useState(50);
-  return (
-    <div className="relative mt-16 overflow-hidden rounded-lg shadow-lift">
-      <div className="relative aspect-[16/8] select-none">
-        <img src={beforeAfter.after.src} alt={beforeAfter.after.alt} className="absolute inset-0 size-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 overflow-hidden" style={{ width: `${pos}%` }}>
-          <img
-            src={beforeAfter.before.src}
-            alt={beforeAfter.before.alt}
-            className="absolute inset-0 h-full object-cover grayscale"
-            style={{ width: `${10000 / pos}%`, maxWidth: "none" }}
-            loading="lazy"
-          />
-        </div>
-        <div className="absolute inset-y-0 w-1 -translate-x-1/2 bg-flame" style={{ left: `${pos}%` }}>
-          <span className="absolute left-1/2 top-1/2 grid size-10 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-flame text-white shadow-lift">
-            <ChevronLeft className="size-4 -mr-1" aria-hidden />
-            <ChevronRight className="size-4 -ml-1" aria-hidden />
-          </span>
-        </div>
-        <span className="absolute left-4 top-4 rounded bg-ink/80 px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">Before</span>
-        <span className="absolute right-4 top-4 rounded bg-flame px-3 py-1 text-xs font-bold uppercase tracking-widest text-white">After</span>
-      </div>
-      <input
-        type="range"
-        min={5}
-        max={95}
-        value={pos}
-        onChange={(e) => setPos(Number(e.target.value))}
-        className="absolute inset-0 size-full cursor-ew-resize opacity-0"
-        aria-label="Drag to compare before and after"
-      />
-    </div>
-  );
-}
 
 export default function Gallery({ compact = false }: { compact?: boolean }) {
   const [filter, setFilter] = useState<(typeof galleryCategories)[number]>("All");
@@ -105,8 +68,6 @@ export default function Gallery({ compact = false }: { compact?: boolean }) {
             ))}
           </AnimatePresence>
         </motion.div>
-
-        {!compact && <BeforeAfter />}
 
         <AnimatePresence>
           {lightbox !== null && shown[lightbox] && (

@@ -1,21 +1,20 @@
-const u = (id: string, w = 1200) =>
-  `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
-
 /**
- * PLACEHOLDER photography — swap for Wayne's real jobsite photos.
- * Drop the real files into /public/real/ and update the paths below;
- * everything else in the site reads from this file, so nothing else changes.
+ * Real Mallen Excavating jobsite photography, sourced from the company
+ * Facebook page. Files live in /public/photos — this is the only place
+ * that maps them to services and gallery categories.
  */
-export const images = {
-  hero: u("photo-1649807479468-40011b31ee09", 2000),
-  about: u("photo-1612878100556-032bbf1b3bab", 1400),
+const p = (name: string) => `/photos/${name}`;
 
-  septic: u("photo-1763515186653-2df0fba44697", 900),
-  waterproofing: u("photo-1759967495843-3edc416114a9", 900),
-  grading: u("photo-1575642975010-983c53b3eeb9", 900),
-  driveways: u("photo-1763516763259-4f7ce3d19c2b", 900),
-  clearing: u("photo-1778436010586-60eeb96a3ac5", 900),
-  sitework: u("photo-1503708928676-1cb796a0891e", 900),
+export const images = {
+  hero: p("sitework-02-pool-excavation.jpg"),
+  about: p("sitework-03-loader-truck-farm.jpg"),
+
+  septic: p("septic-01-pipe-trench.jpg"),
+  waterproofing: p("waterproofing-01-trench-propane.jpg"),
+  grading: p("grading-03-topsoil-pile.jpg"),
+  driveways: p("grading-02-cleared-lot.jpg"),
+  clearing: p("clearing-01-stump-removal.jpg"),
+  sitework: p("sitework-01-loader-truck.jpg"),
 } as const;
 
 export type GalleryItem = {
@@ -25,18 +24,21 @@ export type GalleryItem = {
 };
 
 export const galleryItems: GalleryItem[] = [
-  { src: u("photo-1763515186653-2df0fba44697", 1100), alt: "Excavation crew digging a septic line", category: "Septic & Sewer" },
-  { src: u("photo-1759967495843-3edc416114a9", 1100), alt: "Foundation drainage trench prepared with stone", category: "Drainage & Waterproofing" },
-  { src: u("photo-1575642975010-983c53b3eeb9", 1100), alt: "Front loader spreading topsoil", category: "Site Work & Grading" },
-  { src: u("photo-1763516763259-4f7ce3d19c2b", 1100), alt: "Skid steer preparing a gravel driveway base", category: "Site Work & Grading" },
-  { src: u("photo-1778436010586-60eeb96a3ac5", 1100), alt: "Clearing wooded land for a new site", category: "Site Work & Grading" },
-  { src: u("photo-1503708928676-1cb796a0891e", 1100), alt: "Excavator digging on an active job site", category: "Equipment" },
-  { src: u("photo-1622645636770-11fbf0611463", 1100), alt: "Heavy equipment working through a Hudson Valley winter", category: "Equipment" },
-  { src: u("photo-1612878100556-032bbf1b3bab", 1100), alt: "Excavator staged on site", category: "Equipment" },
-  { src: u("photo-1649807479468-40011b31ee09", 1100), alt: "Excavator on a hillside site", category: "Site Work & Grading" },
+  { src: p("waterproofing-02-foundation-trench.jpg"), alt: "Foundation drain line trench, ready for gravel and pipe", category: "Drainage & Waterproofing" },
+  { src: p("septic-01-pipe-trench.jpg"), alt: "Septic line installation with corrugated pipe and gravel bed", category: "Septic & Sewer" },
+  { src: p("sitework-02-pool-excavation.jpg"), alt: "Large excavation dug for a new pool installation", category: "Site Work & Grading" },
+  { src: p("clearing-01-stump-removal.jpg"), alt: "Excavator pulling a tree stump and root ball", category: "Site Work & Grading" },
+  { src: p("drainage-01-retaining-wall.jpg"), alt: "Boulder retaining wall built for drainage and grading", category: "Drainage & Waterproofing" },
+  { src: p("equipment-01-truck-trailer-dusk.jpg"), alt: "Mallen Excavating truck and trailer staged for the next job", category: "Equipment" },
+  { src: p("waterproofing-01-trench-propane.jpg"), alt: "Foundation waterproofing trench alongside a propane tank", category: "Drainage & Waterproofing" },
+  { src: p("grading-01-cleared-lot.jpg"), alt: "Mini excavator finishing a cleared and graded lot", category: "Site Work & Grading" },
+  { src: p("sitework-04-shed-demo.jpg"), alt: "Excavator demolishing an old shed", category: "Site Work & Grading" },
+  { src: p("grading-03-topsoil-pile.jpg"), alt: "Loader delivering a fresh pile of screened topsoil", category: "Site Work & Grading" },
+  { src: p("sitework-01-loader-truck.jpg"), alt: "Loader filling the dump truck with fill material", category: "Site Work & Grading" },
+  { src: p("equipment-02-truck-trailer-day.jpg"), alt: "Truck and trailer loaded with the mini excavator", category: "Equipment" },
+  { src: p("grading-02-cleared-lot.jpg"), alt: "Freshly graded dirt lot ready for the next phase", category: "Site Work & Grading" },
+  { src: p("sitework-03-loader-truck-farm.jpg"), alt: "Loader and dump truck on a rural property job", category: "Site Work & Grading" },
+  { src: p("grading-04-cleared-lot.jpg"), alt: "Mini excavator working a cleared building lot", category: "Site Work & Grading" },
+  { src: p("sitework-05-loader-truck.jpg"), alt: "Loader and dump truck moving fill material" , category: "Site Work & Grading" },
+  { src: p("equipment-03-truck-trailer-dusk.jpg"), alt: "Truck, trailer, and excavator staged at dusk", category: "Equipment" },
 ];
-
-export const beforeAfter = {
-  before: { src: u("photo-1778436010586-60eeb96a3ac5", 1400), alt: "Overgrown wooded lot before clearing" },
-  after: { src: u("photo-1575642975010-983c53b3eeb9", 1400), alt: "Cleared, graded site ready to build on" },
-};
