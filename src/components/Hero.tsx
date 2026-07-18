@@ -40,15 +40,15 @@ export default function Hero() {
         <motion.img
           src={images.hero}
           alt="Excavator working a Hudson Valley job site"
-          className="size-full object-cover opacity-40"
+          className="size-full object-cover opacity-45"
           initial={{ scale: 1.1 }}
           animate={{ scale: [1.1, 1.18, 1.1] }}
           transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <div className="blueprint-grid absolute inset-0 opacity-60" aria-hidden />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/30 to-transparent" />
+      <div className="blueprint-grid absolute inset-0 opacity-40" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
 
       <div className="container-site relative z-10 pb-24 pt-40">
         <motion.p

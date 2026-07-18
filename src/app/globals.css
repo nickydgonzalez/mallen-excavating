@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand — luxury matte black, charcoal, white, construction orange */
-  --color-ink: #0a0b0c;
-  --color-coal: #151719;
-  --color-slate: #232629;
+  /* Brand — premium contractor: charcoal, white, safety orange */
+  --color-ink: #141618;
+  --color-coal: #1e2124;
+  --color-slate: #2a2e32;
   --color-smoke: #9aa3ab;
   --color-mist: #f4f5f6;
   --color-flame: #f25c05;
