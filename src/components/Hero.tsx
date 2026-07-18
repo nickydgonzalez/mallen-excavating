@@ -66,9 +66,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
         >
-          Your Neighbor,
+          Hudson Valley
           <br />
-          <span className="text-flame-hot text-glow">Not A Franchise.</span>
+          <span className="text-flame-hot text-glow">Excavation &amp; Site Work.</span>
         </motion.h1>
 
         <motion.p
@@ -77,9 +77,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
         >
-          Septic, drainage, waterproofing, and site work — done by Wayne
-          himself, not a call center. Fair pricing, straight answers, and
-          52 years of trust across the Hudson Valley.
+          Septic systems, drainage, waterproofing, grading, and general
+          excavation — done by Wayne himself, not a call center. Fair
+          pricing and 52 years of trust across the Hudson Valley.
         </motion.p>
 
         <motion.div
