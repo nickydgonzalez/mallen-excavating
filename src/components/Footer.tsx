@@ -97,7 +97,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-site flex flex-col items-center justify-between gap-2 py-5 text-xs text-smoke sm:flex-row">
           <p>© {new Date().getFullYear()} {business.legalName}. All rights reserved.</p>
-          <p>Site by Nicole González · AI Front Desk</p>
+          <p>Made by whitewing.ai</p>
         </div>
       </div>
     </footer>
