@@ -40,19 +40,16 @@ export default function Hero() {
         <motion.img
           src={images.hero}
           alt="Excavator working a Hudson Valley job site"
-          className="size-full object-cover opacity-45"
+          className="size-full object-cover"
           initial={{ scale: 1.1 }}
           animate={{ scale: [1.1, 1.18, 1.1] }}
           transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <div className="blueprint-grid absolute inset-0 opacity-40" aria-hidden />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />
-      <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-transparent to-transparent" />
 
       <div className="container-site relative z-10 pb-24 pt-48">
         <motion.p
-          className="eyebrow on-dark mb-7"
+          className="eyebrow on-dark text-pop mb-7"
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -61,7 +58,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="display max-w-5xl whitespace-nowrap text-4xl text-flame-hot sm:text-6xl lg:text-7xl"
+          className="display text-pop max-w-5xl whitespace-nowrap text-4xl text-flame-hot sm:text-6xl lg:text-7xl"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
@@ -70,7 +67,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="display mt-2 text-3xl text-white sm:text-4xl lg:text-5xl"
+          className="display text-pop mt-2 text-3xl text-white sm:text-4xl lg:text-5xl"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.38 }}
@@ -79,7 +76,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="mt-7 max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl"
+          className="text-pop mt-7 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
@@ -109,7 +106,7 @@ export default function Hero() {
           </Link>
           <a
             href={business.phoneHref}
-            className="flex items-center gap-2.5 px-2 py-4 font-bold uppercase tracking-wide text-white/80 transition-colors hover:text-flame-hot"
+            className="text-pop flex items-center gap-2.5 px-2 py-4 font-bold uppercase tracking-wide text-white transition-colors hover:text-flame-hot"
           >
             <Phone className="size-5" aria-hidden />
             {business.phone}

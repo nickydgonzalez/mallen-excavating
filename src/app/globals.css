@@ -98,6 +98,13 @@ body {
   text-shadow: 0 0 40px rgb(242 92 5 / 0.35);
 }
 
+/* strong legibility shadow for text sitting directly on a full-clarity photo */
+.text-pop {
+  text-shadow:
+    0 2px 6px rgb(0 0 0 / 0.85),
+    0 8px 24px rgb(0 0 0 / 0.7);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
