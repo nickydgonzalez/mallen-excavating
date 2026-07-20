@@ -46,7 +46,6 @@ export default function Hero() {
           transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
-      <div className="absolute inset-0 bg-black/20" aria-hidden />
 
       <div className="container-site relative z-10 flex flex-col items-center pb-24 pt-48 text-center">
         <motion.p
@@ -59,7 +58,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="display text-outline max-w-4xl text-4xl text-flame-hot sm:whitespace-nowrap sm:text-6xl lg:text-7xl"
+          className="display text-pop max-w-4xl text-3xl text-flame-hot sm:whitespace-nowrap sm:text-5xl lg:text-6xl"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
