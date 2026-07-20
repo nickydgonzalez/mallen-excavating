@@ -12,27 +12,14 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const transparent = pathname === "/" && !scrolled && !open;
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => setOpen(false), [pathname]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4 sm:px-5 sm:pt-5">
-      <div
-        className={`mx-auto flex max-w-[84rem] items-center justify-between gap-6 rounded-3xl px-5 py-3.5 transition-all duration-500 sm:px-8 sm:py-4 ${
-          transparent ? "bg-transparent" : "glass shadow-lift"
-        }`}
-      >
+      <div className="mx-auto flex max-w-[84rem] items-center justify-between gap-6 rounded-3xl border border-white/10 bg-ink/95 px-5 py-3.5 shadow-lift backdrop-blur-xl sm:px-8 sm:py-4">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
           <span className="grid size-16 place-items-center overflow-hidden rounded-2xl bg-white p-1.5 shadow-card sm:size-20">
             <img src="/logo.png" alt={business.name} className="size-full object-contain" />
@@ -87,7 +74,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="glass mx-auto mt-2 max-w-[76rem] rounded-2xl shadow-lift lg:hidden" aria-label="Mobile">
+        <nav className="mx-auto mt-2 max-w-[76rem] rounded-2xl border border-white/10 bg-ink/95 shadow-lift backdrop-blur-xl lg:hidden" aria-label="Mobile">
           <div className="flex flex-col p-4">
             {links.map((l) => (
               <Link
