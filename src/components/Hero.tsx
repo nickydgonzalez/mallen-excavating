@@ -46,10 +46,11 @@ export default function Hero() {
           transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.div>
+      <div className="absolute inset-0 bg-black/20" aria-hidden />
 
       <div className="container-site relative z-10 flex flex-col items-center pb-24 pt-48 text-center">
         <motion.p
-          className="eyebrow on-dark text-pop mb-7"
+          className="eyebrow on-dark text-pop mb-8 text-base! tracking-[0.35em]!"
           initial={{ opacity: 0, y: -16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
@@ -58,7 +59,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="display text-pop max-w-5xl text-4xl text-flame-hot sm:whitespace-nowrap sm:text-6xl lg:text-7xl"
+          className="display text-pop normal-case! max-w-5xl text-5xl font-extrabold! text-flame-hot sm:whitespace-nowrap sm:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
@@ -67,7 +68,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="display text-pop mt-2 text-3xl text-white sm:text-4xl lg:text-5xl"
+          className="display text-pop normal-case! mt-2 text-2xl font-semibold! text-white sm:text-3xl lg:text-4xl"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.38 }}
@@ -76,7 +77,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.p
-          className="text-pop mt-7 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl"
+          className="text-pop mt-8 max-w-[650px] text-lg font-normal leading-[1.6] text-white/90 sm:text-xl"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45 }}
@@ -87,7 +88,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          className="mt-12 flex flex-wrap items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
