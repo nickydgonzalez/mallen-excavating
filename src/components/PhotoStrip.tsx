@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { galleryItems } from "@/lib/images";
 import Reveal from "@/components/Reveal";
@@ -26,12 +27,13 @@ export default function PhotoStrip() {
 
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
           {shown.map((g, i) => (
-            <Reveal key={g.src} delay={i * 0.06} className="overflow-hidden rounded-lg">
-              <img
+            <Reveal key={g.src} delay={i * 0.06} className="relative aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
                 src={g.src}
                 alt={g.alt}
-                loading="lazy"
-                className="h-full min-h-44 w-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 33vw, 50vw"
+                className="object-cover"
               />
             </Reveal>
           ))}

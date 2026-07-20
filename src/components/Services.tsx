@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Wrench, ShieldCheck, Droplets, Waves, Home, CloudRain, Layers, Trees, Route, Truck } from "lucide-react";
 import { services } from "@/lib/business";
 import { images } from "@/lib/images";
@@ -51,11 +52,12 @@ export default function Services({ heading = true, limit = false }: { heading?: 
               <Reveal key={s.slug} delay={i * 0.07}>
                 <article className="group relative flex h-full flex-col overflow-hidden rounded-lg bg-white shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">
                   <div className="relative h-48 overflow-hidden">
-                    <img
+                    <Image
                       src={images[s.image as keyof typeof images]}
                       alt={s.title}
-                      loading="lazy"
-                      className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="relative flex flex-1 flex-col p-6 pt-10">

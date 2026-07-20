@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { localLegend } from "@/lib/business";
 import Reveal from "@/components/Reveal";
 
@@ -7,11 +8,12 @@ export default function LocalLegend() {
       <div className="container-site grid items-center gap-12 lg:grid-cols-2">
         <Reveal className="order-2 overflow-hidden rounded-lg bg-mist shadow-lift lg:order-1">
           <div className="grid aspect-[4/3] place-items-center p-10">
-            <img
+            <Image
               src="/logo-badge.png"
               alt="Mallen Excavating — Skull Finder"
+              width={900}
+              height={900}
               className="w-full max-w-xs"
-              loading="lazy"
             />
           </div>
         </Reveal>

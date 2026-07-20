@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import WhyUs from "@/components/WhyUs";
 import CtaBand from "@/components/CtaBand";
@@ -63,11 +64,12 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <div className="relative">
-              <img
+              <Image
                 src={images.about}
                 alt="Excavator staged on a Hudson Valley job site"
+                width={1400}
+                height={1050}
                 className="w-full rounded-lg object-cover shadow-lift"
-                loading="lazy"
               />
               <div className="absolute -bottom-6 -left-6 hidden rounded-lg bg-flame px-7 py-5 text-white shadow-lift sm:block">
                 <p className="display text-3xl">Est. {business.founded}</p>

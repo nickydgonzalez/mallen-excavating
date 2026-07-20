@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import { galleryCategories } from "@/lib/business";
@@ -39,7 +40,7 @@ export default function Gallery({ compact = false }: { compact?: boolean }) {
           ))}
         </Reveal>
 
-        <motion.div layout className="grid grid-cols-2 gap-4 lg:grid-cols-3">
+        <motion.div layout className="grid auto-rows-[11rem] grid-cols-2 gap-4 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {shown.map((g, i) => (
               <motion.button
@@ -54,11 +55,12 @@ export default function Gallery({ compact = false }: { compact?: boolean }) {
                 className={`group relative overflow-hidden rounded-lg ${i % 5 === 0 ? "row-span-2" : ""}`}
                 aria-label={`View larger: ${g.alt}`}
               >
-                <img
+                <Image
                   src={g.src}
                   alt={g.alt}
-                  loading="lazy"
-                  className="size-full min-h-44 object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <span className="absolute bottom-3 left-3 translate-y-2 text-left text-xs font-bold uppercase tracking-widest text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
