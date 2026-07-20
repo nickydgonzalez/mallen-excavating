@@ -6,7 +6,7 @@
 const p = (name: string) => `/photos/${name}`;
 
 export const images = {
-  hero: p("sitework-02-pool-excavation.jpg"),
+  hero: p("sitework-01-loader-truck.jpg"),
   about: p("sitework-03-loader-truck-farm.jpg"),
 
   septic: p("septic-01-pipe-trench.jpg"),
