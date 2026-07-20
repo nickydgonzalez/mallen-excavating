@@ -58,7 +58,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="display text-pop max-w-5xl whitespace-nowrap text-4xl text-flame-hot sm:text-6xl lg:text-7xl"
+          className="display text-pop max-w-5xl text-4xl text-flame-hot sm:whitespace-nowrap sm:text-6xl lg:text-7xl"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}

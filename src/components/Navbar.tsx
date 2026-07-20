@@ -7,7 +7,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-mist bg-white">
       <div className="container-site flex items-center justify-between py-4">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
-          <span className="display text-xl leading-none text-flame sm:text-2xl">
+          <span className="display text-2xl leading-none text-flame sm:text-4xl">
             Mallen
             <span className="block text-ink">Excavating</span>
           </span>
