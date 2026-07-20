@@ -54,7 +54,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          {business.city} · Hudson Valley
+          Serving The Hudson Valley Area
         </motion.p>
 
         <motion.h1
@@ -98,15 +98,9 @@ export default function Hero() {
           >
             Get Free Estimate
           </Link>
-          <Link
-            href="/gallery"
-            className="flex items-center gap-2.5 rounded-full border border-white/15 bg-slate px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-1 hover:border-flame-hot"
-          >
-            View Our Work
-          </Link>
           <a
             href={business.phoneHref}
-            className="text-pop flex items-center gap-2.5 rounded-full border border-white/15 bg-slate px-6 py-4 font-bold uppercase tracking-wide text-white transition-colors hover:border-flame-hot hover:text-flame-hot"
+            className="text-pop flex items-center gap-2.5 font-bold uppercase tracking-wide text-white transition-colors hover:text-flame-hot"
           >
             <Phone className="size-5" aria-hidden />
             {business.phone}
@@ -114,7 +108,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.ul
-          className="mt-16 flex flex-wrap justify-center gap-3"
+          className="text-pop mt-14 flex flex-wrap items-center justify-center gap-x-7 gap-y-3"
           initial="hidden"
           animate="show"
           variants={{ show: { transition: { staggerChildren: 0.08, delayChildren: 0.8 } } }}
@@ -122,7 +116,7 @@ export default function Hero() {
           {badges.map((b) => (
             <motion.li
               key={b.label}
-              className="flex items-center gap-2 rounded-full border border-white/15 bg-slate px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/90"
+              className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-white/90"
               variants={{
                 hidden: { opacity: 0, y: 12 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.5 } },

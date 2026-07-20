@@ -3,7 +3,6 @@ import LocalLegend from "@/components/LocalLegend";
 import Services from "@/components/Services";
 import PhotoStrip from "@/components/PhotoStrip";
 import WhyUs from "@/components/WhyUs";
-import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
 import QuoteForm from "@/components/QuoteForm";
 import CtaBand from "@/components/CtaBand";
@@ -52,7 +51,6 @@ export default function HomePage() {
         heading="52 Years Built This Reputation"
         subtext="Free estimates, straight answers, and a phone Wayne actually answers."
       />
-      <Reviews compact />
       <Faq compact />
       <section className="bg-mist pb-20 md:pb-28" id="quote">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">

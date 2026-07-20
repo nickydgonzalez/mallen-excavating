@@ -6,10 +6,7 @@ import { usePathname } from "next/navigation";
 import { Phone, Menu, X, Star } from "lucide-react";
 import { business } from "@/lib/business";
 
-const links = [
-  { href: "/#services", label: "Services" },
-  { href: "/#reviews", label: "Reviews" },
-];
+const links = [{ href: "/#services", label: "Services" }];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -48,9 +45,9 @@ export default function Navbar() {
             href={business.googleReviewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-full border-2 border-white/30 px-5 py-3 text-sm font-extrabold uppercase tracking-wide text-white transition-all hover:-translate-y-0.5 hover:border-flame-hot hover:text-flame-hot lg:flex"
+            className="hidden items-center gap-1.5 text-sm font-bold uppercase tracking-wide text-white/85 transition-colors hover:text-flame-hot lg:flex"
           >
-            <Star className="size-4.5 fill-current" aria-hidden />
+            <Star className="size-4 fill-current" aria-hidden />
             Leave A Review
           </a>
           <a
