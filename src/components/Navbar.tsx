@@ -21,8 +21,9 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-4 sm:px-5 sm:pt-5">
       <div className="mx-auto flex max-w-[84rem] items-center justify-between gap-6 rounded-3xl border border-white/10 bg-slate px-5 py-3.5 shadow-lift backdrop-blur-xl sm:px-8 sm:py-4">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
-          <span className="grid size-16 place-items-center overflow-hidden rounded-2xl bg-white p-1.5 shadow-card sm:size-20">
-            <img src="/logo.png" alt={business.name} className="size-full object-contain" />
+          <span className="display text-xl leading-none text-flame-hot sm:text-2xl">
+            Mallen
+            <span className="block text-white">Excavating</span>
           </span>
         </Link>
 
