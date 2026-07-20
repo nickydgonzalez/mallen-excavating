@@ -13,13 +13,13 @@ function FacebookIcon({ className }: { className?: string }) {
 export default function Footer() {
   return (
     <footer className="bg-ink text-white/80">
-      <div className="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
-        <div>
+      <div className="container-site grid gap-12 py-16 text-center md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-col items-center">
           <Link href="/" className="display block text-2xl leading-none text-flame-hot">
             Mallen
             <span className="block text-white">Excavating</span>
           </Link>
-          <p className="mt-5 text-sm leading-relaxed">
+          <p className="mt-5 max-w-xs text-sm leading-relaxed">
             Family-owned site work and excavation serving the Hudson Valley since 1974.
             Honest pricing, reliable scheduling, and a phone Wayne actually answers.
           </p>
@@ -30,14 +30,14 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="grid size-10 place-items-center rounded-full bg-white/10 transition-colors hover:bg-flame hover:text-white"
+              className="grid size-10 place-items-center rounded-full border border-white/15 bg-slate transition-colors hover:bg-flame hover:text-white"
             >
               <FacebookIcon className="size-4.5" />
             </a>
           </div>
         </div>
 
-        <nav aria-label="Services">
+        <nav aria-label="Services" className="flex flex-col items-center">
           <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-white">Services</h3>
           <ul className="space-y-2.5 text-sm">
             {services.map((s) => (
@@ -50,7 +50,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <nav aria-label="Company">
+        <nav aria-label="Company" className="flex flex-col items-center">
           <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-white">Company</h3>
           <ul className="space-y-2.5 text-sm">
             {[
@@ -68,26 +68,26 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <div>
+        <div className="flex flex-col items-center">
           <h3 className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-white">Get In Touch</h3>
           <ul className="space-y-3.5 text-sm">
             <li>
-              <a href={business.phoneHref} className="flex items-center gap-3 font-bold text-white transition-colors hover:text-flame-hot">
+              <a href={business.phoneHref} className="flex items-center justify-center gap-3 font-bold text-white transition-colors hover:text-flame-hot">
                 <Phone className="size-4.5 text-flame-hot" aria-hidden /> {business.phone}
               </a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center justify-center gap-3">
               <Mail className="size-4.5 shrink-0 text-flame-hot" aria-hidden /> {business.email}
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center justify-center gap-3">
               <MapPin className="size-4.5 shrink-0 text-flame-hot" aria-hidden /> {business.address}
             </li>
-            <li className="flex items-start gap-3">
-              <Clock className="mt-0.5 size-4.5 shrink-0 text-flame-hot" aria-hidden />
+            <li className="flex items-center justify-center gap-3">
+              <Clock className="size-4.5 shrink-0 text-flame-hot" aria-hidden />
               <span>{business.hours}</span>
             </li>
           </ul>
-          <p className="mt-5 text-xs leading-relaxed text-smoke">
+          <p className="mt-5 max-w-xs text-xs leading-relaxed text-smoke">
             Serving {business.serviceAreas.slice(0, 6).join(", ")} &amp; the surrounding Hudson Valley.
           </p>
         </div>
