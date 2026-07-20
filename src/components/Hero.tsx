@@ -47,11 +47,11 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="container-site relative z-10 pb-24 pt-48">
+      <div className="container-site relative z-10 flex flex-col items-center pb-24 pt-48 text-center">
         <motion.p
           className="eyebrow on-dark text-pop mb-7"
-          initial={{ opacity: 0, x: -16 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           {business.city} · Hudson Valley
@@ -87,7 +87,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
@@ -100,13 +100,13 @@ export default function Hero() {
           </Link>
           <Link
             href="/gallery"
-            className="glass flex items-center gap-2.5 rounded-full px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-1"
+            className="flex items-center gap-2.5 rounded-full border border-white/15 bg-slate px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:-translate-y-1 hover:border-flame-hot"
           >
             View Our Work
           </Link>
           <a
             href={business.phoneHref}
-            className="text-pop flex items-center gap-2.5 px-2 py-4 font-bold uppercase tracking-wide text-white transition-colors hover:text-flame-hot"
+            className="text-pop flex items-center gap-2.5 rounded-full border border-white/15 bg-slate px-6 py-4 font-bold uppercase tracking-wide text-white transition-colors hover:border-flame-hot hover:text-flame-hot"
           >
             <Phone className="size-5" aria-hidden />
             {business.phone}
@@ -114,7 +114,7 @@ export default function Hero() {
         </motion.div>
 
         <motion.ul
-          className="mt-16 flex flex-wrap gap-3"
+          className="mt-16 flex flex-wrap justify-center gap-3"
           initial="hidden"
           animate="show"
           variants={{ show: { transition: { staggerChildren: 0.08, delayChildren: 0.8 } } }}
@@ -122,7 +122,7 @@ export default function Hero() {
           {badges.map((b) => (
             <motion.li
               key={b.label}
-              className="glass flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/90"
+              className="flex items-center gap-2 rounded-full border border-white/15 bg-slate px-4 py-2 text-xs font-semibold uppercase tracking-wide text-white/90"
               variants={{
                 hidden: { opacity: 0, y: 12 },
                 show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
