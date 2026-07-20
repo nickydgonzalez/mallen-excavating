@@ -15,10 +15,9 @@ export default function Footer() {
     <footer className="bg-ink text-white/80">
       <div className="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="flex items-center">
-            <span className="grid size-16 place-items-center overflow-hidden rounded-lg bg-white p-1.5 shadow-card">
-              <img src="/logo.png" alt={business.name} className="size-full object-contain" />
-            </span>
+          <Link href="/" className="display block text-2xl leading-none text-flame-hot">
+            Mallen
+            <span className="block text-white">Excavating</span>
           </Link>
           <p className="mt-5 text-sm leading-relaxed">
             Family-owned site work and excavation serving the Hudson Valley since 1974.
