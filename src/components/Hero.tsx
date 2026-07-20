@@ -59,7 +59,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          className="display text-pop text-outline normal-case! max-w-5xl text-5xl font-extrabold! text-flame-hot sm:whitespace-nowrap sm:text-7xl lg:text-8xl"
+          className="display text-pop text-outline max-w-5xl text-5xl font-extrabold! text-flame-hot sm:whitespace-nowrap sm:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
