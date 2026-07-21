@@ -15,10 +15,10 @@ export default function Navbar() {
 
         <a
           href={business.phoneHref}
-          className="flex items-center gap-2 rounded-full bg-flame px-6 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-flame-hot sm:px-7 sm:py-3.5 sm:text-base"
+          className="flex items-center gap-2 rounded-full bg-flame px-5 py-3 text-base font-extrabold text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-flame-hot sm:px-7 sm:py-3.5 sm:text-xl"
         >
-          <Phone className="size-4.5" aria-hidden />
-          Call Now
+          <Phone className="size-5 shrink-0 sm:size-6" aria-hidden />
+          {business.phone}
         </a>
       </div>
     </header>
