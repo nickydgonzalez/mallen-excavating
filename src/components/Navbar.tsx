@@ -1,16 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { business } from "@/lib/business";
 
 export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-mist bg-white">
-      <div className="container-site flex items-center justify-between py-4">
+      <div className="container-site flex items-center justify-between py-2.5">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
-          <span className="display text-2xl leading-none text-flame sm:text-4xl">
-            Mallen
-            <span className="block text-ink">Excavating</span>
-          </span>
+          <Image
+            src="/logo-mark.png"
+            alt={business.name}
+            width={811}
+            height={459}
+            priority
+            className="h-16 w-auto sm:h-24"
+          />
         </Link>
 
         <a
