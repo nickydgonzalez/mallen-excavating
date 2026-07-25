@@ -6,7 +6,7 @@ import { business } from "@/lib/business";
 export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-mist bg-white">
-      <div className="container-site flex items-center justify-between py-3">
+      <div className="container-site flex items-center justify-between py-2">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
           <Image
             src="/logo-badge.png"
@@ -14,7 +14,7 @@ export default function Navbar() {
             width={1024}
             height={1024}
             priority
-            className="h-28 w-auto sm:h-44"
+            className="h-20 w-auto sm:h-32"
           />
         </Link>
 
