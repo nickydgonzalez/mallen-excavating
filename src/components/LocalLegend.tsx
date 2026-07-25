@@ -11,8 +11,8 @@ export default function LocalLegend() {
             <Image
               src="/logo-badge.png"
               alt="Mallen Excavating — Skull Finder"
-              width={900}
-              height={900}
+              width={1024}
+              height={1024}
               className="w-full max-w-xs"
             />
           </div>

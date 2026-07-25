@@ -11,8 +11,8 @@ export default function Navbar() {
           <Image
             src="/logo-mark.png"
             alt={business.name}
-            width={811}
-            height={459}
+            width={1024}
+            height={695}
             priority
             className="h-16 w-auto sm:h-24"
           />
