@@ -18,6 +18,12 @@ export default function Navbar() {
           />
         </Link>
 
+        <p className="hidden text-center text-sm font-bold uppercase tracking-[0.15em] text-slate/60 md:block">
+          Licensed &amp; Insured
+          <span className="mx-3 text-mist">|</span>
+          Serving The Hudson Valley Since {business.founded}
+        </p>
+
         <a
           href={business.phoneHref}
           className="flex items-center gap-2 rounded-full bg-flame px-5 py-3 text-base font-extrabold text-white shadow-glow transition-all hover:-translate-y-0.5 hover:bg-flame-hot sm:px-7 sm:py-3.5 sm:text-xl"
