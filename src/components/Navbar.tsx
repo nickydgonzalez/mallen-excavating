@@ -6,15 +6,15 @@ import { business } from "@/lib/business";
 export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-mist bg-white">
-      <div className="container-site flex items-center justify-between py-2.5">
+      <div className="container-site flex items-center justify-between py-3">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
           <Image
-            src="/logo-mark.png"
+            src="/logo-badge.png"
             alt={business.name}
             width={1024}
-            height={695}
+            height={1024}
             priority
-            className="h-16 w-auto sm:h-24"
+            className="h-28 w-auto sm:h-44"
           />
         </Link>
 
