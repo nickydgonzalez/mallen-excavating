@@ -9,20 +9,14 @@ export default function Navbar() {
       <div className="container-site flex items-center justify-between py-2">
         <Link href="/" className="flex items-center" aria-label={`${business.name} home`}>
           <Image
-            src="/logo-badge.png"
+            src="/logo-mark.png"
             alt={business.name}
             width={1024}
-            height={1024}
+            height={695}
             priority
             className="h-20 w-auto sm:h-32"
           />
         </Link>
-
-        <p className="hidden text-center text-sm font-bold uppercase tracking-[0.15em] text-slate/60 md:block">
-          Licensed &amp; Insured
-          <span className="mx-3 text-mist">|</span>
-          Serving The Hudson Valley Since {business.founded}
-        </p>
 
         <a
           href={business.phoneHref}
